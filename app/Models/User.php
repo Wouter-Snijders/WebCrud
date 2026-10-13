@@ -35,7 +35,7 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
-public function  HasRoleAtleast($role)
+public function  HasRoleAtleast(string $role):bool
     {
         $roles = [
             'user',
