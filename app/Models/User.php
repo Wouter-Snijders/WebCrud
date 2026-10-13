@@ -35,6 +35,9 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
+    /**
+     * Checks if the user has a specfic role and if is higher than the parameter role
+     */
 public function  HasRoleAtleast(string $role):bool
     {
         $roles = [
