@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('tasks', TaskController::class)->middleware(['auth', 'admin']);
+Route::resource('tasks', TaskController::class)->middleware(['auth', 'role:moderator']);
 
 route::get('/dashboard', function () {
     return view('dashboard');

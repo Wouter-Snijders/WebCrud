@@ -35,5 +35,17 @@ class User extends Authenticatable
         return $this->role === 'admin';
     }
 
+public function  HasRoleAtleast($role)
+    {
+        $roles = [
+            'user',
+            'moderator',
+            'admin',
+        ];
+
+        return array_search($this->role, $roles) >= array_search($role, $roles);
+
+
+}
 
 }
